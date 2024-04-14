@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+    <html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> Accident data analytics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+	<link rel="stylesheet" type="text/css" href="dashboard.css">
+    <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+    <script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+</head>
+<body>
+		<div class="navbar">
+            <nav class="nav-container">
+                <ul class="right-nav">
+                    <li><a href="Accident data analytics.html">Accident Data Analysis</a></li>
+                </ul>
+                <ul class="left-nav">  
+                    <li><a href="Account.html">Home</a></li> 
+                    <li><a href="Home.html">Explore</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="contact us.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="head">
+                <h1> Road Accident Analysis</h1>
+            </div>
+            <div class="m1">
+                
+                <div class="down">
+                    <h3>
+                    Total CY Casualities
+                </h3>
+                    <p class="big">195.7K</p>
+                <p class="b1">-11.9%</p>
+
+                </div>
+                <div class="down">
+                    <h3>
+                    Total CY Accidents
+                </h3>
+                    <p class="big">144.4K</p>
+                <p class="b1">-11.7%</p>
+
+                </div>
+                <div class="down">
+                    <h3>
+                    Total CY-Fatal Casualities
+                </h3>
+                    <p class="big">2.9K</p>
+                <p class="b1">-11.9%</p>
+
+                </div>
+                <div class="down">
+                    <h3>
+                    Total CY-Serious Casualities
+                </h3>
+                    <p class="big">168.7K</p>
+                <p class="b1">-11.9%</p>
+
+                </div>
+                <div class="down">
+                    <h3>
+                    Total CY-Slight Casualities
+                </h3>
+                    <p class="big">156.7K</p>
+                <p class="b1">-11.9%</p>
+                </div>
+            </div>
+            <div class="align"> 
+                <div class="main">  
+                <p>Casualities by Location-based</p><br>
+
+                <div id = "map" style = "width:300px; height:600px"></div>
+            </div>
+            <div class="map"> 
+                <div class="map1">
+                    <p>Casualities by Urban/Rural Area</p><br>
+                <img src="g1.jpeg" alt="nothing"><br>
+                    <p class>Casualities by Light Condition</p><br>
+                <img src="g2.jpeg" alt="nothing"> 
+            </div> 
+            <div class="map1">
+                <p>CY Casualities v/s LY Casualities Monthly Trend</p><br>
+            <img src="g3.jpeg" alt="nothing"><br>
+            <p>CY Casualities by Road Type</p><br>
+            <img src="g4.jpeg" alt="nothing"><br>
+            <div> 
+                
+        </div>
+        </div>
+        <div>  
+            <p>CY Casualities by Vehicle Type</p>
+            <div class="row">
+            <div class="r1"> 
+                <div class="right"> 
+                    <i class="fa-solid fa-tractor icon"></i>
+                    <p>Agriculture<br><br>399</p>
+                </div>
+            </div>
+            <div class="r1"> 
+                <div class="right"> 
+                    <i class="fa-solid fa-motorcycle icon"></i>
+                    <p>Bike<br><br>15610</p>
+                </div>
+            </div>
+            <div class="r1"> 
+                <div class="right"> 
+                    <i class="fa-solid fa-bus icon"></i>
+                    <p>Bus<br><br>6573</p>
+                </div>
+            </div>
+            <div class="r1"> 
+                <div class="right"> 
+                    <i class="fa-solid fa-car icon"></i>
+                    <p>Car<br><br>155804</p>
+                </div>
+            </div>
+            <div class="r1"> 
+                <div class="right"> 
+                    <i class="fa-solid fa-truck icon"></i>
+                    <p>Goods<br><br>15905</p>
+                </div>
+            </div>  
+        </div>
+        </div>
+        </div></div></div><br>
+    <div class="proskills1">
+        <div class="para5">
+             <div class="iconify">
+                <i class="fa-solid fa-calendar-days"></i>
+            </div><br>
+            <h4>Highest accident month: <br>May</h4><br>
+         </div>
+         <div class="para5">
+            <div class="iconify">
+                <i class="fa-solid fa-gauge"></i>
+           </div><br>
+           <h4>Severity main reasons: <br>High speed</h4><br>
+        </div> 
+        <div class="para5">
+            <div class="iconify">
+                <i class="fa-solid fa-venus-mars"></i>
+           </div><br>
+           <h4>Gender Classification: <br>male</h4><br>
+        </div> 
+        <div class="para5">
+            <div class="iconify">
+               <i class="fa-solid fa-users"></i>
+           </div><br>
+           <h4>Highest age group: <br>24 - 25</h4><br>
+        </div>   <div class="para5">
+            <div class="iconify">
+                <i class="fa-solid fa-id-card"></i>
+           </div><br>
+           <h4>Licence holder type: <br>Licensed</h4><br>
+        </div>  
+    </div>
+    <div class="proskills1">
+        <div class="para5">
+             <div class="iconify">
+                <i class="fa-solid fa-road"></i>
+            </div><br>
+            <h4>Road type: <br>Straight road</h4><br>
+         </div>
+         <div class="para5">
+            <div class="iconify">
+                <i class="fa-solid fa-house"></i>
+           </div><br>
+           <h4>Area type: <br>Urban & Open area</h4><br>
+        </div> 
+        <div class="para5">
+            <div class="iconify">
+                <i class="fa-solid fa-user-injured"></i>
+           </div><br>
+           <h4>Injury type: <br>Grievous Injury</h4><br>
+        </div> 
+        <div class="para5">
+            <div class="iconify">
+                <i class="fa-solid fa-people-arrows"></i>
+           </div><br>
+           <h4>Traffic violation: <br>Over speeding</h4><br>
+        </div>   <div class="para5">
+            <div class="iconify">
+                <i class="fa-solid fa-sun"></i>
+           </div><br>
+           <h4>Weather: <br>Sunny/Clear</h4><br>
+        </div>  
+    </div>
+    
+    </div>
+    <script>
+        // Creating map options
+        var mapOptions = {
+           center: [15.3173, 75.7139],
+           zoom: 10
+        }
+        // Creating a map object
+        var map = new L.map('map', mapOptions);
+        
+        // Creating a Layer object
+        var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+    
+        // Adding layer to the map
+        map.addLayer(layer);
+        
+        // Icon options
+        var iconOptions = {
+           iconUrl: 'red.png',
+           iconSize: [50, 50]
+        }
+        // Creating a custom icon
+        var customIcon = L.icon(iconOptions);
+        
+        // Creating Marker Options
+        var markerOptions = {
+           title: "MyLocation",
+           clickable: true,
+           draggable: true,
+           icon: customIcon
+        }
+        // Creating a Marker
+        var marker = L.marker([12.9716, 77.5946], markerOptions);
+        var marker1 = L.marker([13.3379, 77.1173], markerOptions);
+        var marker2 = L.marker([12.9700, 77.6536], markerOptions);
+        var marker3 = L.marker([12.5218, 76.8951], markerOptions);
+        var marker4 = L.marker([16.1681, 74.7805], markerOptions);
+        var marker5 = L.marker([14.2251, 76.3980], markerOptions);
+        var marker6 = L.marker([13.9299, 75.5681], markerOptions);
+        var marker7 = L.marker([12.1873, 76.3637], markerOptions);
+        var marker8 = L.marker([12.7209, 77.2799], markerOptions);
+        var marker9 = L.marker([13.3409, 74.7421], markerOptions);
+        var marker10 = L.marker([14.7937, 74.6869], markerOptions);
+        var marker11 = L.marker([17.9104, 77.5199], markerOptions);
+        var marker12 = L.marker([17.9104, 77.5199], markerOptions);
+    var marker13 = L.marker([14.4644, 75.9218], markerOptions);
+    var marker14 = L.marker([16.8302, 75.7100], markerOptions);
+    var marker15 = L.marker([13.3161, 75.7720], markerOptions);
+    var marker16= L.marker([12.8438, 75.2479], markerOptions);
+    var marker17 = L.marker([16.1691, 75.6615], markerOptions);
+    var marker18 = L.marker([13.3379, 77.1173], markerOptions);
+        var marker19 = L.marker([12.9700, 77.6536], markerOptions);
+        var marker20 = L.marker([12.5218, 76.8951], markerOptions);
+        var marker21 = L.marker([16.1681, 74.7805], markerOptions);
+        var marker22 = L.marker([14.2251, 76.3980], markerOptions);
+        var marker23= L.marker([13.9299, 75.5681], markerOptions);
+        var marker24 = L.marker([12.1873, 76.3637], markerOptions);
+        var marker25 = L.marker([12.7209, 77.2799], markerOptions);
+        var marker26 = L.marker([13.3409, 74.7421], markerOptions);
+        var marker27 = L.marker([14.7937, 74.6869], markerOptions);
+        var marker28 = L.marker([17.9104, 77.5199], markerOptions);
+        var marker29 = L.marker([17.9104, 77.5199], markerOptions);
+    var marker30 = L.marker([14.4644, 75.9218], markerOptions);
+    var marker31 = L.marker([16.8302, 75.7100], markerOptions); 
+    
+        
+        // Adding popup to the marker
+        marker.bindPopup('Hi welcome to Tutorialspoint').openPopup();
+        
+        // Adding marker to the map
+        marker.addTo(map);
+        marker1.addTo(map);
+        marker2.addTo(map);
+        marker3.addTo(map);
+        marker4.addTo(map);
+        marker5.addTo(map);
+        marker6.addTo(map);
+        marker7.addTo(map);
+        marker8.addTo(map);
+        marker9.addTo(map);
+        marker10.addTo(map);
+        marker11.addTo(map);
+        marker12.addTo(map);
+        marker13.addTo(map);
+        marker14.addTo(map);
+        marker15.addTo(map);
+        marker16.addTo(map);
+        marker17.addTo(map);
+        marker18.addTo(map);
+        marker19.addTo(map);
+        marker20.addTo(map);
+        marker21.addTo(map);
+        marker22.addTo(map);
+        marker23.addTo(map);
+        marker24.addTo(map);
+        marker25.addTo(map);
+        marker26.addTo(map);
+        marker27.addTo(map);
+        marker28.addTo(map);
+        marker29.addTo(map);
+        marker30.addTo(map);
+        marker31.addTo(map);
+
+</script>
+</body>
+</html>
+                    
+                
+                

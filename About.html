@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+    <html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> Accident data analytics</title>
+	<link rel="stylesheet" type="text/css" href="About.css">
+    <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+      <script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+</head>
+<body>
+		<div class="navbar">
+            <nav class="nav-container">
+                <ul class="right-nav">
+                    <li><a href="Accident data analytics.html">Accident Data Analysis</a></li>
+                </ul>
+                <ul class="left-nav">  
+                    <li><a href="Account.html">Home</a></li> 
+                    <li><a href="Home.html">Explore</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="contact us.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            </div>
+            <div class="head">
+                <h1>Zone Classification Based On Accidents</h1>
+            </div>
+            <div class="main">
+                <div class="wrapper">
+                <div class="text-box">
+                    <div class="rd"> <h2>Red Zone</h2><br></div>
+                   
+                    <div class="redmap">
+                        <div id = "map" style = "width:1000px; height:580px"></div>
+
+                    </div><br>
+                   
+                    <p>The "red zone" typically refers to the area of a vehicle's blind spot, particularly in larger vehicles like trucks or buses. It's called the red zone because it represents the area around the vehicle where the driver's visibility is significantly reduced or completely blocked. This zone is especially dangerous for pedestrians, cyclists, and smaller vehicles because they may not be visible to the driver.
+
+                        Accidents occurring in the red zone are often severe because the driver may not see objects, pedestrians, or vehicles in their blind spot, leading to collisions or incidents when they attempt to change lanes, turn, or maneuver their vehicle. Without proper awareness and caution, these blind spots can result in serious injuries or fatalities.
+                        
+                        To mitigate the risks associated with the red zone, drivers should be trained to check their blind spots regularly, use mirrors effectively, and be cautious when making maneuvers that could potentially lead to collisions with objects or other road users in these blind spots.</p>
+                </div>
+                <div class="inputbx">
+                    <input type="submit" value="Red Zone Analytics"  onclick="window.location.href='red.html'" name="">
+                </div>
+            </div>
+            
+        </div>
+        <div class="main">
+            <div class="wrapper">
+            <div class="text-box">
+                <div class="or"><h2>Orange Zone</h2><br></div>
+                
+                <div id = "map1" style = "width:1000px; height:580px"></div>
+                <br>
+                
+                <p>The term "orange zone" is not as widely recognized or standardized as the concept of the "red zone." In the context of construction or roadworks, the orange zone may signify the area immediately surrounding the work site where there's a higher risk of accidents due to machinery, workers, or uneven surfaces. Drivers are usually advised to proceed with caution, reduce speed, and be prepared for sudden changes in traffic flow or road conditions when entering an orange zone.
+
+                    Similarly, in terms of hazardous road conditions, such as sharp curves, steep inclines, or areas prone to landslides or rockfalls, an orange zone might indicate the stretch of road where extra vigilance is required.
+                    In essence, while the term "orange zone" may not have a universally defined meaning, it generally implies a zone where increased attention and caution are necessary to prevent accidents or mishaps.</p>
+            </div>
+            <div class="inputbx1">
+                <input type="submit" value="Orange Zone Analytics"  onclick="window.location.href='orange.html'" name="">
+            </div>
+        </div>
+        
+    </div>
+    <div class="main">
+        <div class="wrapper">
+        <div class="text-box">
+            <div class="bl"><h2>Blue Zone</h2></div>
+            <br>
+            <div id = "map2" style = "width:1000px; height:580px"></div><br>
+            
+            <p>The term "blue zone" doesn't have a widely recognized meaning in the context of road safety or transportation.
+
+                One possible interpretation could be related to parking zones. In some cities, parking areas designated for disabled individuals are painted blue to signify their accessibility. These blue zones are typically located close to entrances of buildings or facilities and are reserved for vehicles with proper permits for disabled parking.
+                
+                In other contexts, "blue zone" might refer to a hypothetical area where law enforcement or security personnel have heightened presence or surveillance, possibly to deter crime or enforce traffic regulations.</p>
+        </div>
+        <div class="inputbx2">
+            <input type="submit" value="Blue Zone Anaytics" onclick="window.location.href='blue.html'" name="">
+        </div>
+    </div>
+    
+</div>
+<div class="main">
+    <div class="wrapper">
+    <div class="text-box">
+        <div class="gr"><h2>Green Zone</h2></div>
+        <br>
+        <div id = "map3" style = "width:1000px; height:580px"></div><br>
+        <p> A term "green zone" typically refers to an area of the road designated for vegetation or landscaping, often found along highways or in urban environments. While green zones can enhance the aesthetic appeal of roadways and provide environmental benefits such as air purification and habitat preservation.  Green zones may contain trees, shrubs, or other landscaping features that can become hazardous obstacles in the event of a collision. Impacting trees or solid landscaping elements can significantly increase the severity of accidents and the risk of injury to occupants.n dry climates or during periods of drought, green zones with dry vegetation can pose a heightened risk of wildfires. A vehicle accident that ignites vegetation in a green zone can quickly escalate into a larger wildfire, endangering nearby motorists, residents, and emergency responders. </p>
+    </div>
+    <div class="inputbx3">
+        <input type="submit" value="Green Zone Analytics" onclick="window.location.href='green.html'" name="">
+    </div>
+</div>
+
+</div>
+<script>
+    // Creating map options
+    var mapOptions = {
+       center: [15.3173, 75.7139],
+       zoom: 10
+    }
+    // Creating a map object
+    var map = new L.map('map', mapOptions);
+    
+    // Creating a Layer object
+    var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+
+    // Adding layer to the map
+    map.addLayer(layer);
+    
+    // Icon options
+    var iconOptions = {
+       iconUrl: 'red.png',
+       iconSize: [50, 50]
+    }
+    // Creating a custom icon
+    var customIcon = L.icon(iconOptions);
+    
+    // Creating Marker Options
+    var markerOptions = {
+       title: "MyLocation",
+       clickable: true,
+       draggable: true,
+       icon: customIcon
+    }
+    // Creating a Marker
+    var marker = L.marker([12.9716, 77.5946], markerOptions);
+    var marker1 = L.marker([13.3379, 77.1173], markerOptions);
+    var marker2 = L.marker([12.9700, 77.6536], markerOptions);
+    var marker3 = L.marker([12.5218, 76.8951], markerOptions);
+    var marker4 = L.marker([16.1681, 74.7805], markerOptions);
+    var marker5 = L.marker([14.2251, 76.3980], markerOptions);
+    var marker6 = L.marker([13.9299, 75.5681], markerOptions);
+    var marker7 = L.marker([12.1873, 76.3637], markerOptions);
+
+    
+    // Adding popup to the marker
+    marker.bindPopup('Hi welcome to Tutorialspoint').openPopup();
+    
+    // Adding marker to the map
+    marker.addTo(map);
+    marker1.addTo(map);
+    marker2.addTo(map);
+    marker3.addTo(map);
+    marker4.addTo(map);
+    marker5.addTo(map);
+    marker6.addTo(map);
+    marker7.addTo(map);
+
+
+
+       // Creating map options
+       var mapOptions = {
+       center: [15.3173, 75.7139],
+       zoom: 10
+    }
+    // Creating a map object
+    var map1 = new L.map('map1', mapOptions);
+    
+    // Creating a Layer object
+    var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+
+    // Adding layer to the map
+    map1.addLayer(layer);
+    
+    // Icon options
+    var iconOptions = {
+       iconUrl: 'orange.png',
+       iconSize: [50, 50]
+    }
+    // Creating a custom icon
+    var customIcon = L.icon(iconOptions);
+    
+    // Creating Marker Options
+    var markerOptions = {
+       title: "MyLocation",
+       clickable: true,
+       draggable: true,
+       icon: customIcon
+    }
+    // Creating a Marker
+    var marker = L.marker([12.7209, 77.2799], markerOptions);
+    var marker1 = L.marker([13.3409, 74.7421], markerOptions);
+    var marker2 = L.marker([14.7937, 74.6869], markerOptions);
+    var marker3 = L.marker([17.9104, 77.5199], markerOptions);
+    var marker4 = L.marker([17.9104, 77.5199], markerOptions);
+    var marker5 = L.marker([14.4644, 75.9218], markerOptions);
+    var marker6 = L.marker([16.8302, 75.7100], markerOptions);
+    var marker7 = L.marker([13.3161, 75.7720], markerOptions);
+    var marker8 = L.marker([12.8438, 75.2479], markerOptions);
+    var marker9 = L.marker([16.1691, 75.6615], markerOptions);
+
+    
+    // Adding popup to the marker
+    marker.bindPopup('Hi welcome to Tutorialspoint').openPopup();
+    
+    // Adding marker to the map
+    marker.addTo(map1);
+    marker1.addTo(map1);
+    marker2.addTo(map1);
+    marker3.addTo(map1);
+    marker4.addTo(map1);
+    marker5.addTo(map1);
+    marker6.addTo(map1);
+    marker7.addTo(map1);
+    marker8.addTo(map1);
+    marker9.addTo(map1);
+
+
+    
+       // Creating map options
+       var mapOptions = {
+       center: [17.438139, 78.395830],
+       zoom: 10
+    }
+    // Creating a map object
+    var map2 = new L.map('map2', mapOptions);
+    
+    // Creating a Layer object
+    var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+
+    // Adding layer to the map
+    map2.addLayer(layer);
+    
+    // Icon options
+    var iconOptions = {
+       iconUrl: 'blue.png',
+       iconSize: [50, 50]
+    }
+    // Creating a custom icon
+    var customIcon = L.icon(iconOptions);
+    
+    // Creating Marker Options
+    var markerOptions = {
+       title: "MyLocation",
+       clickable: true,
+       draggable: true,
+       icon: customIcon
+    }
+    // Creating a Marker
+    var marker = L.marker([15.3173, 75.7139], markerOptions);
+    var marker1 = L.marker([12.2958, 76.6394], markerOptions);
+    var marker2= L.marker([14.7951, 75.3991], markerOptions);
+    var marker3 = L.marker([17.3297, 76.8343], markerOptions);
+    var marker4 = L.marker([13.4355, 77.7315], markerOptions);
+    var marker5 = L.marker([16.2160, 77.3566], markerOptions);
+    var marker6= L.marker([13.1362, 78.1291], markerOptions);
+    var marker7 = L.marker([15.8497, 74.4977], markerOptions);
+    var marker8 = L.marker([15.3505, 76.1567], markerOptions);
+    
+    // Adding popup to the marker
+    marker.bindPopup('Hi welcome to Tutorialspoint').openPopup();
+    
+    // Adding marker to the map
+    marker.addTo(map2);
+    marker1.addTo(map2);
+    marker2.addTo(map2);
+    marker3.addTo(map2);
+    marker4.addTo(map2);
+    marker5.addTo(map2);
+    marker6.addTo(map2);
+    marker7.addTo(map2);
+    marker8.addTo(map2);
+
+
+     // Creating map options
+     var mapOptions = {
+       center: [15.3173, 75.7139],
+       zoom: 10
+    }
+    // Creating a map object
+    var map3 = new L.map('map3', mapOptions);
+    
+    // Creating a Layer object
+    var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+
+    // Adding layer to the map
+    map3.addLayer(layer);
+    
+    // Icon options
+    var iconOptions = {
+       iconUrl: 'green.png',
+       iconSize: [50, 50]
+    }
+    // Creating a custom icon
+    var customIcon = L.icon(iconOptions);
+    
+    // Creating Marker Options
+    var markerOptions = {
+       title: "MyLocation",
+       clickable: true,
+       draggable: true,
+       icon: customIcon
+    }
+    // Creating a Marker
+    var marker = L.marker([15.3173, 75.7139], markerOptions);
+    var marker1 = L.marker([15.1394, 76.9214], markerOptions);
+    var marker2 = L.marker([12.3375, 75.8069], markerOptions);
+    var marker3 = L.marker([12.3375, 75.8069], markerOptions);
+    var marker4 = L.marker([15.4589, 75.0078], markerOptions);
+    var marker5 = L.marker([15.3647, 75.1240], markerOptions);
+    var marker6 = L.marker([16.7626, 77.1442], markerOptions);
+    var marker7 = L.marker([15.4315, 75.6355], markerOptions);
+    var marker8 = L.marker([12.9585, 78.2710], markerOptions);
+    
+    // Adding popup to the marker
+    marker.bindPopup('Hi welcome to Tutorialspoint').openPopup();
+    
+    // Adding marker to the map
+    marker.addTo(map3);
+    marker1.addTo(map3);
+    marker2.addTo(map3);
+    marker3.addTo(map3);
+    marker4.addTo(map3);
+    marker5.addTo(map3);
+    marke6r.addTo(map3);
+    marker7.addTo(map3);
+    marker8.addTo(map3);
+    
+
+
+
+ </script>
+
+            </body>
+            </html>

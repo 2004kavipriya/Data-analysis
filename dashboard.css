@@ -1,0 +1,275 @@
+*{
+	margin:0;
+	padding:0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    margin: 0 auto;
+    background:linear-gradient(90deg, rgb(21, 136, 104), rgb(106, 203, 236));
+}
+.nav-container{
+    background-color: #01061A;
+    border: #01061A;
+    display: flex;
+    justify-content: space-between;
+}
+.right-nav li ,.left-nav li {
+    display: inline-block;
+}
+.right-nav li a, .left-nav li a{
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 14px 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:#20B9A9;
+}
+.right-nav li a:hover, .left-nav li a:hover{
+    background-color: rgb(113, 111, 107);
+}
+.right-nav li a{
+    font-size: 30px;
+}
+.left-nav li a{
+    font-size: 20px;
+}
+.head h1{
+    text-align: center;
+    color: rgb(159, 20, 20);
+    font-size: 50px;
+}
+.m1{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 50px;
+}
+.m1 h3{
+    font-size: 20px;
+    color: rgb(22, 30, 100);
+}
+.m1 .down p{
+    display: block;
+    color: azure;
+    text-align: center;
+    margin-top:10px ;
+}
+.m1 .down .big {
+    font-size: 40px;
+}
+.m1 .down .b1{
+    margin-top: 5px;
+    
+}
+.align{
+    display:flex;
+    padding: 5px 0;
+    
+}
+.align .main #map{
+    float: left;
+    width: 280px;
+    height: 600px;
+    margin-left: 30px;
+
+}
+.align .main p{
+    margin-left: 30px;
+    font-size: 20px;
+    color: rgb(156, 12, 58);
+}
+.map{
+    display: flex;
+}
+.map p{
+    font-size: 19px;
+    margin-left: 30px;
+    color:rgb(156, 12, 58) ;
+}
+
+.map .map1 img{
+    display: flex;
+    width: 350px;
+    height: 250px;
+    padding: 20px;
+}
+.map .map2 img{
+    display: flex;
+    width: 350px;
+    height: 250px;
+    padding: 10px;
+    margin-left: 10px;
+}
+.row .icon{
+    display: block;
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size: 60px;
+    padding: 20px;
+}
+.row .right{
+    display: flex; 
+}
+.row .right p{
+    margin-top: 40px;
+    color: rgb(209, 104, 17);
+    font-weight: bold;
+}
+.head{
+    text-align: center;
+
+}
+.head h3{
+    font-size: 30px;
+}
+.head h1{
+    font-size: 60px;
+}
+.proskills{
+	display: flex;
+    margin-right: 20px;
+
+}
+.proskills1{
+	display: flex;
+    
+
+}
+.proskills1 .para5{
+    text-align: center;
+    width: 300px;
+    height: 200px;
+    margin-right: 20px;
+}
+
+.proskills .para1{
+    text-align: center;
+    width: 300px;
+    height: 200px;
+}
+.proskills .para2{
+    text-align: center;
+    width: 300px;
+    height: 200px;
+}
+.proskills .para3{
+    text-align: center;
+    width: 300px;
+    height: 200px;
+}
+.proskills .para4{
+    text-align: center;
+    width: 300px;
+    height: 200px;
+}
+.proskills1 .para5{
+    text-align: center;
+    width: 300px;
+    height: 200px;
+}
+.proskills .para4{
+    text-align: center;
+    columns: red;
+  
+}
+
+.proskills .para1,.para2,.para3,.para4, h4{
+    font-size: 20px;
+    height: 200px;
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+}
+.proskills1 .para5 .iconify{
+    font-size: 50px;
+    color:rgb(12, 12, 74);
+}
+.proskills .para1 .iconify{
+    font-size: 50px;
+    color:black;
+}
+.proskills .para2 .iconify{
+    font-size: 50px;
+    color:black;
+}
+.proskills .para3 .iconify{
+    font-size: 50px;
+    color: black;
+}
+.proskills .para4 .iconify{
+    font-size: 50px;
+    color: black;
+}
+.proskills .para5 .iconify{
+    font-size: 80px;
+    color: black;
+}
+
+.submit{
+    color: blue;
+    font-size: 20px;
+    border: 0px;
+    background-color: transparent;
+}
+.para1{
+    margin-top: 50px;
+	display: inline-block;
+	width:300px;
+    height: 20px;
+	padding:30px ;
+	margin-left: 100px;
+	border-radius: 10px;
+	border: 3px solid rgb(213, 20, 20);
+
+}
+.para2{
+    margin-top: 50px;
+	display: inline-block;
+	width:300px;
+    height: 350px;
+	padding:30px ;
+	margin-left: 20px;
+	margin-right: 10px;
+	border-radius: 10px;
+	border: 3px solid rgb(213, 20, 20);
+    ;
+}
+.para3{
+    margin-top: 50px;
+	display: inline-block;
+	width:300px;
+    height: 350px;
+	padding:30px ;
+	margin-left: 20px;
+	border-radius: 10px;
+	border: 3px solid rgb(213, 20, 20);
+}
+.para4{
+    margin-top: 50px;
+	display: inline-block;
+	width:300px;
+    height: 300px;
+	padding:30px ;
+	margin-left: 20px;
+	border-radius: 10px;
+	border: 3px solid rgb(213, 20, 20);	
+}
+.para5{
+    margin-top: 50px;
+	display: inline-block;
+    width:300px;
+	padding:30px ;
+	margin-left: 20px;
+	border-radius: 10px;
+	border: 3px solid rgb(213, 20, 20);
+}
+.para6{
+    margin-top: 50px;
+	display: inline-block;
+    width:300px;
+	padding:30px ;
+	margin-left: 20px;
+	border-radius: 10px;
+	border: 3px solid rgb(213, 20, 20);
+}
